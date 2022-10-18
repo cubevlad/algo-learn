@@ -18,3 +18,9 @@ const countFactorial = (f: number): number => (f > 1 ? f * countFactorial(f - 1)
 */
 
 console.log(countFactorial(5)); // 120
+
+const sum = (arr: number[]): number => {
+  return arr.length ? arr[0] + sum(arr.slice(1, arr.length)) : 0;
+};
+
+console.log(sum([1, 2, 3, 4]));
